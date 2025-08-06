@@ -121,13 +121,13 @@ setInterval(() => {
 
 
 
-const sonidoPajaro = new Audio('../img/chupar.mp3');
-const sonidoPasos = new Audio('../img/pasos.mp3');
-const sonidoAlarma = new Audio('../img/alarma.mp3');
-const sonidoPajaros = new Audio('../img/pajaros.mp3');
+const sonidoPajaro = new Audio('./img/chupar.mp3');
+const sonidoPasos = new Audio('./img/pasos.mp3');
+const sonidoAlarma = new Audio('./img/alarma.mp3');
+const sonidoPajaros = new Audio('./img/pajaros.mp3');
 sonidoPajaros.loop = true;
 
-
+ 
 let contadorInerval;
 let intervalo;
 
