@@ -56,7 +56,17 @@ body {
             overflow: hidden;
             z-index: 7;
 
-
+            .tiempo,
+            .fine {
+                font-size: 30px;
+                height: 30px;
+                width: auto;
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0;
+            }
+            .fine{
+                margin-bottom: 20px;
+            }
 
             .contentTextt {
                 position: relative;
@@ -118,6 +128,7 @@ body {
                 bottom: 0%;
                 width: 190px;
             }
+
             .arbol {
                 left: -7%;
                 bottom: 20%;
@@ -154,25 +165,26 @@ body {
     }
 
 
-#btnPausa{
-    background-color: #000;
-    color: yellow;
-    border-radius: 12px;
-    font-size: 19px;
-    padding: 12px;
-    font-weight: bold;
+    #btnPausa {
+        background-color: #000;
+        color: yellow;
+        border-radius: 12px;
+        font-size: 19px;
+        padding: 12px;
+        font-weight: bold;
 
-    &:hover{
-        background-color: yellow;
-        color: #000;
-        cursor: pointer;
-    }
-    &:disabled{
-        background-color: #979797;
-        color: #c5c5c5;
+        &:hover {
+            background-color: yellow;
+            color: #000;
+            cursor: pointer;
+        }
 
+        &:disabled {
+            background-color: #979797;
+            color: #c5c5c5;
+
+        }
     }
-}
 
 
     //////////////

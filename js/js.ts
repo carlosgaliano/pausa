@@ -113,7 +113,8 @@ setInterval(() => {
     inizio = inizio + (60 * 1);
     inizio = new Date(inizio).toLocaleTimeString("it-IT", {
         hour: '2-digit',
-        minute: '2-digit'
+        minute: '2-digit',
+        second: "2-digit"
     });
     fecha.innerHTML = inizio;
 }, 1000);
@@ -122,6 +123,10 @@ setInterval(() => {
 
 const sonidoPajaro = new Audio('../img/chupar.mp3');
 const sonidoPasos = new Audio('../img/pasos.mp3');
+const sonidoAlarma = new Audio('../img/alarma.mp3');
+const sonidoPajaros = new Audio('../img/pajaros.mp3');
+sonidoPajaros.loop = true;
+
 
 let contadorInerval;
 let intervalo;
@@ -132,11 +137,12 @@ sessionStorage.setItem("cargo", "false");
 
 btnPausa.addEventListener("click", function (e) {
 
-/*     function startAnimation(): void {
-        document.getElementById("contentDibujo");
-    }
-
-    startAnimation(); */
+    /*     function startAnimation(): void {
+            document.getElementById("contentDibujo");
+        }
+    
+        startAnimation(); */
+    sonidoPajaros.play();
     contentDibujo.setAttribute("src", "./img/p-1-p.svg");
     sonidoPasos.play();
     sonidoPasos.loop = true;
@@ -163,7 +169,8 @@ btnPausa.addEventListener("click", function (e) {
             inizio = inizio + (60 * 1);
             inizio = new Date(inizio).toLocaleTimeString("it-IT", {
                 hour: '2-digit',
-                minute: '2-digit'
+                minute: '2-digit',
+                second: "2-digit"
             });
             fecha.innerHTML = inizio;
         }, 1000);
@@ -174,7 +181,8 @@ btnPausa.addEventListener("click", function (e) {
         let fine = inizio + (1000 * 60 * (parseInt(numero_pausa.value) - 1));
         fine = new Date(fine).toLocaleTimeString("it-IT", {
             hour: '2-digit',
-            minute: '2-digit'
+            minute: '2-digit',
+            second: "2-digit"
         });
         fecha.innerHTML = fine
 
@@ -200,9 +208,6 @@ btnPausa.addEventListener("click", function (e) {
 
         contadorInerval = setInterval(() => {
 
-
-
-
             let min = Math.floor(tiempo_ / 60);
             let seg = tiempo_ % 60;
 
@@ -224,7 +229,10 @@ btnPausa.addEventListener("click", function (e) {
                     numero_pausa.removeAttribute("disabled");
                     sonidoPasos.pause();
                     sonidoPasos.currentTime = 0;
-
+                    sonidoAlarma.play();
+                    sonidoPajaros.pause();
+                    sonidoPajaro.currentTime = 0;
+                    sonidoAlarma.currentTime = 0;
                 }, 1000);
 
             } else {
