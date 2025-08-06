@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pausa-Carlos-Galiano</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/css.min.css">
+</head>
+
+<body>
+    <section class="pausa" id="body">
+        <div class="grid">
+            <div class="col_1">
+                <div class="contentTextt">
+                    <h1>Siamo in PAUSA</h1>
+                    <p>Scrivi il valore dei minuti a Pausar (Mac: 15):</p>
+
+                    <input type="number" id="numero_pausa" autocomplete="off" value="1" placeholder="mm"
+                        style="margin-bottom: 12px;">
+
+                    <div class="contentPausa" style="display: flex;">
+                        <h2>La pausa è iniziata alle:</h2>
+                        <p id="fecha" style="margin-bottom: 0; height: 18px; display: none  !important;"></p>
+                        <p id="tiempo" style="font-size: 20px; height: 28px; width: auto;"></p>
+                        <h2>La pausa finirà alle: </h2>
+                        <p style="font-size: 24px; margin: 0; display: block;" id="fine">00:00</p>
+                        <div>
+                            <button type="button" style="font-size: 28px;" id="btnPausa">Inizio di Pausa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col_2">
+                <div class="plantas"></div>
+                <img src="./img/gallina-1.svg" class="gallina1" alt="" srcset="">
+                <img src="./img/gallina-2.svg" class="gallina2" alt="" srcset="">
+                <img src="./img/gallina-3.svg" class="gallina3" alt="" srcset="">
+                <img src="./img/arbol.svg" class="arbol" alt="" srcset="">
+                <div id="contador" class="contador">1:00</div>
+                <div class="content_pajaro">
+                    <div class="dibujo">
+                        <img src="img/hielo.svg" class="hielo" alt="" srcset="">
+                        <div class="mascaraAgua" id="mascaraAgua" style="height: 51px;">
+                            <div class="agua"></div>
+                        </div>
+                        <img src="img/vaso.svg" class="vaso" alt="" srcset="">
+                        <div class="contentDibujo">
+
+                            <iframe src="./img/p-0.svg" frameborder="0" height="600" id="contentDibujo"
+                                width="600"></iframe>
+                            <!--  <img src="img/p-0.svg" alt="" srcset="" height="100%" id="contentDibujo" width="100%"> -->
+                            <!--   <object data="img/p-0.svg" height="100%" id="contentDibujo" width="100%"
+                                type="image/svg+xml"></object> -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </section>
+    <script src="js/js.min.js" defer></script>
+</body>
+
+</html>
